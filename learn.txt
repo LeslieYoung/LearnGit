@@ -2,4 +2,11 @@
 >初始化仓库
 >此时当前目录下生成.git目录
 >该目录包括：branches  config  description  HEAD  hooks  info  objects  refs
+-2- git add 
+-3- git commit 
+>这里暂时只用了-m选项
+>上传到仓库后：
+ [master （根提交） 48f3356] try git init
+ 1 file changed, 5 insertions(+)
+ create mode 100644 learn.txt
 
