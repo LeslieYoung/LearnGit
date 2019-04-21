@@ -1,3 +1,8 @@
+问题：
+1.为何刚开始是big bang,提交一次后变了master
+2.git commit并不会推送到远程仓库，只是在本地仓库？
+
+----------------------
 -1- git init
 >初始化仓库
 >此时当前目录下生成.git目录
@@ -9,4 +14,23 @@
  [master （根提交） 48f3356] try git init
  1 file changed, 5 insertions(+)
  create mode 100644 learn.txt
+>TODO：详细学习下commit命令，可以指定注释对应的文件？不指定时是否是整体注释
+
+-4- git status
+> 用于查看仓库状态（哪些文件进行了修改，但不能给出具体的修改内容）
+位于分支 master
+尚未暂存以备提交的变更：
+  （使用 "git add <文件>..." 更新要提交的内容）
+  （使用 "git checkout -- <文件>..." 丢弃工作区的改动）
+
+	修改：     learn.txt
+
+修改尚未加入提交（使用 "git add" 和/或 "git commit -a"）
+
+-5- git diff
+> 查看文件修改内容
+
+
+
+
 
