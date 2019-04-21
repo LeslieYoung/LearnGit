@@ -1,6 +1,7 @@
 问题：
 1.为何刚开始是big bang,提交一次后变了master
 2.git commit并不会推送到远程仓库，只是在本地仓库？
+3.每次修改都要先git add再git commit吗
 
 ----------------------
 -1- git init
@@ -29,6 +30,9 @@
 
 -5- git diff
 > 查看文件修改内容
+
+-6- git log
+> 查看版本提交记录
 
 
 
