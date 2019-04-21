@@ -1,8 +1,9 @@
 问题：
 1.为何刚开始是big bang,提交一次后变了master
 2.git commit并不会推送到远程仓库，只是在本地仓库？
-3.每次修改都要先git add再git commit吗
+3.每次修改都要先git add再git commit吗？ 是，git add会把当前对文件的修改推入暂存区，git commit只把暂存区的文件推入仓库。所以每次修改都需要先add
 4.如何修改commit -m 提交时的注释？
+5.commit 的-m选项？？
 5.git init后git自动创建了master分支？其他分支如何创建？如何切换？与fork别人的分支有何不同？
 ----------------------
 -1- git init
@@ -10,7 +11,9 @@
 >此时当前目录下生成.git目录
 >该目录包括：branches  config  description  HEAD  hooks  info  objects  refs
 -2- git add 
+    负责把指定文件放入暂存区
 -3- git commit 
+    负责把暂存区的指定文件放入仓库
 >这里暂时只用了-m选项
 >上传到仓库后：
  [master （根提交） 48f3356] try git init
@@ -42,6 +45,12 @@
 
 -8- git reflog 查看历史操作
 
-
+-9- git checkout -- <文件>
+    撤销对工作区的修改(git checkout其实是用版本库里的版本替换工作区的版本)
+    >场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- file。
+    >场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD <file>，就回到了场景1，第二步按场景1操作。   
+    >场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库
+    
+-10- git rm
 
 
