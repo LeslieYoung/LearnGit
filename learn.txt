@@ -6,6 +6,7 @@
 5.commit 的-m选项？？
 6.git init后git自动创建了master分支？其他分支如何创建？如何切换？与fork别人的分支有何不同？
 7.如何同步远程仓库与本地仓库
+8.如果大范围更新该如何做？？（比如目录结构都有大变动）
 ----------------本地仓库-----------------
 -1- git init
 >初始化仓库
@@ -106,3 +107,19 @@
 -19-忽略指定文件
 > Git工作区的根目录下创建一个特殊的.gitignore,添加要忽略的文件
 > 查看如何写https://github.com/github/gitignore
+
+-20- git fetch
+
+　>git fetch orgin master //将远程仓库的master分支下载到本地当前branch中
+　>git log -p master  ..origin/master //比较本地的master分支和origin/master分支的差别
+　>git merge origin/master //进行合并
+
+ 或者
+ >git fetch origin master:tmp //从远程仓库master分支获取最新，在本地建立tmp分支
+ >git diff tmp //將當前分支和tmp進行對比
+ >git merge tmp //合并tmp分支到当前分支
+ 与git pull的不同
+ >git pull：相当于是从远程获取最新版本并merge到本地
+ >git pull origin master
+ >git pull 相当于从远程获取最新版本并merge到本地
+
