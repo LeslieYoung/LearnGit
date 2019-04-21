@@ -1,0 +1,5 @@
+-1- git init
+>初始化仓库
+>此时当前目录下生成.git目录
+>该目录包括：branches  config  description  HEAD  hooks  info  objects  refs
+
