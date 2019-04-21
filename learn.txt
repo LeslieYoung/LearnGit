@@ -2,7 +2,8 @@
 1.为何刚开始是big bang,提交一次后变了master
 2.git commit并不会推送到远程仓库，只是在本地仓库？
 3.每次修改都要先git add再git commit吗
-
+4.如何修改commit -m 提交时的注释？
+5.git init后git自动创建了master分支？其他分支如何创建？如何切换？与fork别人的分支有何不同？
 ----------------------
 -1- git init
 >初始化仓库
@@ -34,6 +35,12 @@
 -6- git log
 > 查看版本提交记录
 
+-7- git reset 版本回退
+> git reset --hard HEAD^
+> git reset --hard <版本编号>
+注意版本回退或切换后该时间线后的记录会消失（git log无法获得，可由git reflog获得版本号来切换）
+
+-8- git reflog 查看历史操作
 
 
 
