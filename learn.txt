@@ -4,7 +4,8 @@
 3.每次修改都要先git add再git commit吗？ 是，git add会把当前对文件的修改推入暂存区，git commit只把暂存区的文件推入仓库。所以每次修改都需要先add
 4.如何修改commit -m 提交时的注释？
 5.commit 的-m选项？？
-5.git init后git自动创建了master分支？其他分支如何创建？如何切换？与fork别人的分支有何不同？
+6.git init后git自动创建了master分支？其他分支如何创建？如何切换？与fork别人的分支有何不同？
+7.如何同步远程仓库与本地仓库
 ----------------本地仓库-----------------
 -1- git init
 >初始化仓库
@@ -68,10 +69,40 @@
 -13- git branch
 > 不跟<分支名> 为查看当前在哪个分支
 > 加<分支名> 为创建新分支
-
+> git branch -d <分支名>
+    删除分支
 -14- 尝试在分支中修改
+-15- git merge <要合并的分支>
+>合并指定分支到当前分支
+>--no-ff参数 普通合并模式（非fast-forward），可查看到合并状态
+> git merge --no-ff -m "commit注释部分" <分支名>
 
+-16- git stash
+> 暂存工作空间（临时存储）
+> git stash pop 恢复刚才的工作空间内容，同时会从暂存空间中删除暂存的内容
+> git stash apply 可以指定恢复哪个工作空间内容，但不会删除该暂存的工作空间
 
+-18- git remote -v
+>查看远程仓库信息
 
+-17- 拉取远程分支
+> git remote -v查看远程库信息
+> git pull 抓取远程的新提交
+> 从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+> 在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+> 建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
 
+从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
 
+-18- git tag
+给对应的commit id打上tag
+>git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+>git tag可以查看所有标签。
+>git tag -d <tagname> 删除指定标签
+>git push origin :refs/tags/<tagname>删除远程上的指定标签
+>git push origin <tagname> 推送指定tag到远程
+>git push origin --tags 推送所有未推送的tag
+
+-19-忽略指定文件
+> Git工作区的根目录下创建一个特殊的.gitignore,添加要忽略的文件
+> 查看如何写https://github.com/github/gitignore
