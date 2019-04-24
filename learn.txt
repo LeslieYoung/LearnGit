@@ -123,3 +123,10 @@
  >git pull origin master
  >git pull 相当于从远程获取最新版本并merge到本地
 
+-21- 本地仓库与远程仓库的绑定
+ >git init
+ >git add README.md
+ >git commit -m "first commit"
+ >git remote add origin <仓库地址>
+ >git push -u origin master
+
