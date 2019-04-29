@@ -129,4 +129,10 @@
  >git commit -m "first commit"
  >git remote add origin <仓库地址>
  >git push -u origin master
+ 
+ 
+-22-删除远程分支
+ >git push origin --delete <分支名> 
+ 
+ 
 
